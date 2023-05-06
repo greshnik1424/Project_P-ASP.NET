@@ -1,0 +1,19 @@
+﻿<h3>@Model.currCategory</h3>
+<h2>Квіти для побачень</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var flower in Model.allFlowers)
+        {
+            @if (flower.Category.categoryName == "Для побачень")
+            {
+                <div class="col-lg-4">
+                    <img class="img-thumbnail" src="@flower.img" alt="@flower.name" />
+                    <h2>Назва: @flower.name</h2>
+                    <p>@flower.desc</p>
+                    <p>Ціна: @flower.price.ToString("c")</p>
+                    <p class="btn btn-warning" href="#">Детальніше</p>
+                </div>
+            }
+        }
+    }
+</div>

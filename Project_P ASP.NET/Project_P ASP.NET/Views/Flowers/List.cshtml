@@ -1,0 +1,10 @@
+﻿<h3>@Model.currCategory</h3>
+<h2>Всі квіти</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Flower flower in Model.allFlowers)
+        {
+        @Html.Partial("AllFlowers", flower)
+        }
+     }
+</div>

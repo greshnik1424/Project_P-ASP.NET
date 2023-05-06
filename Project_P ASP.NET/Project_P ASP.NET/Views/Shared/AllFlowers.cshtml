@@ -1,0 +1,11 @@
+﻿@model Flower
+
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.img" alt="@Model.name" />
+    <h2>Назва: @Model.name</h2>
+    <p>@Model.desc</p>
+    <p>Ціна: @Model.price.ToString("c")</p>
+    <p class="btn btn-warning" href="#">Детальніше</p>
+    <p><a class="btn btn-warning" asp-controller="Cart" asp-action="addToCart" asp-route-Id="@Model.id">Додати у кошик</a></p>
+
+</div>
